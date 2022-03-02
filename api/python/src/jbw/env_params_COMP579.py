@@ -95,7 +95,7 @@ register(
 
 register(
 	  id='JBW-COMP579-hash-v1',
-	  entry_point='jbw.episodic_jb:JBWEnvCOMP579v1',
+	  entry_point='jbw.env_COMP579_episodic:JBWEnvCOMP579v1',
 	  kwargs={
 		'sim_config': sim_config,
 		'reward_fn': reward_fn,
@@ -104,7 +104,7 @@ register(
 
 register(
 	  id='JBW-COMP579-render-hash-v1',
-	  entry_point='jbw.episodic_jb:JBWEnvCOMP579v1',
+	  entry_point='jbw.env_COMP579_episodic:JBWEnvCOMP579v1',
 	  kwargs={
 		'sim_config': sim_config,
 		'reward_fn': reward_fn,
