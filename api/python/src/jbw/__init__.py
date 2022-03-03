@@ -22,7 +22,7 @@ from . import simulator
 from . import visualizer
 from . import env_COMP579
 from . import env_params_COMP579
-from . import episodic_jb
+from . import env_COMP579_episodic
 
 from .agent import *
 from .direction import *
@@ -32,9 +32,9 @@ from .item import *
 from .simulator import *
 from .visualizer import *
 from .env_COMP579 import *
-from .episodic_jb import *
+from .env_COMP579_episodic import *
 
-__all__ = ['agent', 'direction', 'permissions', 'environment', 'item', 'simulator', 'env_COMP579', 'episodic_jb']
+__all__ = ['agent', 'direction', 'permissions', 'environment', 'item', 'simulator', 'env_COMP579', 'env_COMP579_episodic']
 __all__.extend(agent.__all__)
 __all__.extend(direction.__all__)
 __all__.extend(permissions.__all__)
@@ -43,4 +43,4 @@ __all__.extend(item.__all__)
 __all__.extend(simulator.__all__)
 __all__.extend(visualizer.__all__)
 __all__.extend(env_COMP579.__all__)
-__all__.extend(episodic_jb.__all__)
+__all__.extend(env_COMP579_episodic.__all__)
