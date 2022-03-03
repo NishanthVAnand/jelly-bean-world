@@ -158,25 +158,6 @@ else:
 
 			return feature_func
 
-		def get_features(self, vision_state):
-			features = []
-			obs_channel = np.apply_along_axis(self.convert, 2, vision_state)
-			obs_hash = obs_channel.choose(self.hash_vals)
-			for s in self.shape_set:
-				ids = np.bitwise_xor.reduce(view_as_windows(obs_hash, s), axis=(2,3)).flatten()%self.t_size
-				features.extend(list(ids))
-			feature_state = np.zeros(self.t_size)
-			feature_state[list(set(features))] = 1
-			return feature_state
-
-		# def get_features(self, vision_state):
-		# 	features = []
-		# 	obs_channel = np.apply_along_axis(self.convert, 2, vision_state)
-		# 	obs_channel = obs_channel.flatten()
-		# 	features = np.zeros((obs_channel.size, len(self.hash_dict)))
-		# 	features[np.arange(obs_channel.size), obs_channel] = 1
-		# 	return features[:, 1:].flatten()
-
 		def step(self, action):
 			"""Runs a simulation step.
 

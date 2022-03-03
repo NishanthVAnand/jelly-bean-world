@@ -77,7 +77,7 @@ reward_fn = make_reward()
 
 register(
 	  id='JBW-COMP579-hash-v0',
-	  entry_point='jbw.env_COMP579_episodic:JBWEnvCOMP579',
+	  entry_point='jbw.env_COMP579:JBWEnvCOMP579',
 	  kwargs={
 		'sim_config': sim_config,
 		'reward_fn': reward_fn,
@@ -86,7 +86,7 @@ register(
 
 register(
 	  id='JBW-COMP579-render-hash-v0',
-	  entry_point='jbw.env_COMP579_episodic:JBWEnvCOMP579',
+	  entry_point='jbw.env_COMP579:JBWEnvCOMP579',
 	  kwargs={
 		'sim_config': sim_config,
 		'reward_fn': reward_fn,
