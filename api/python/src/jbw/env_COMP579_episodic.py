@@ -281,9 +281,11 @@ class _JBWEnvAgent(Agent):
 		if self._next_action == 0:
 			self.move(RelativeDirection.FORWARD)
 		elif self._next_action == 1:
-			self.turn(RelativeDirection.LEFT)
+			self.move(RelativeDirection.LEFT)
 		elif self._next_action == 2:
-			self.turn(RelativeDirection.RIGHT)
+			self.move(RelativeDirection.RIGHT)
+		elif self._next_action == 3:
+			self.move(RelativeDirection.BACKWARD)
 		else:
 			logger.warn(
 			'Ignoring invalid action %d.' 
