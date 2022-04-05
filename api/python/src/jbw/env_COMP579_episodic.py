@@ -6,6 +6,7 @@ try:
 	modules_loaded = True
 except:
 	modules_loaded = False
+import gc
 
 import numpy as np
 from skimage.util.shape import view_as_windows
@@ -211,6 +212,7 @@ else:
 			"""Resets this environment to its initial state."""
 			self.T = 0
 			del self._sim
+			gc.collect()
 			self._sim = Simulator(sim_config=self.sim_config)
 			self._agent = _JBWEnvAgent(self._sim)
 			self.hash_vals = np.random.randint(0, np.iinfo(np.int32).max,\
