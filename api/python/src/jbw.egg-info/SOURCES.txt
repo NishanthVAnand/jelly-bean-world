@@ -5,7 +5,9 @@ src/jbw/agent.py
 src/jbw/direction.py
 src/jbw/env_COMP579.py
 src/jbw/env_COMP579_episodic.py
+src/jbw/env_COMP579_episodic_transfer.py
 src/jbw/env_params_COMP579.py
+src/jbw/env_params_COMP579_transfer.py
 src/jbw/environment.py
 src/jbw/environments.py
 src/jbw/item.py
